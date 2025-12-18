@@ -1,4 +1,4 @@
---create database monitoring_quality;
+--create database monitoring_quality_air;
 
 create table buildings(
 	id_building int primary key generated always as identity,
@@ -105,6 +105,7 @@ INSERT INTO alerts (id_rooom, id_param, value, datetime, resolved, resolved_by, 
 (3, 1, 25.50, '2024-04-09 13:20:00', false, 'Чернова М.А.', '2024-04-11 11:30:00'),
 (1, 1, 17.50, '2024-04-10 07:45:00', true, 'Петрова С.А.', '2024-04-10 08:15:00'),
 (2, 3, 75.20, '2024-04-08 11:00:00', true, 'Сидоров В.В.', '2024-04-08 12:05:00');
+
 
 
 
