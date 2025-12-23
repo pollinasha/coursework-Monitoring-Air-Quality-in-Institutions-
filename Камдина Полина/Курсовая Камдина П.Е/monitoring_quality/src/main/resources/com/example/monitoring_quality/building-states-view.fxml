@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.monitoring_quality.controller.BuildingStatesViewController">
+
+    <VBox spacing="15" AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="15"
+          AnchorPane.rightAnchor="15" AnchorPane.topAnchor="15">
+
+        <!-- Заголовок и кнопка назад -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label fx:id="buildingNameLabel" text="Мониторинг качества воздуха: "/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backBtn" text="Назад" onAction="#onBackBtn"/>
+        </HBox>
+
+        <!-- Панель фильтров -->
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="Дата анализа:" style="-fx-font-weight: bold;"/>
+            <DatePicker fx:id="selectedDateDP" promptText="Выберите дату"
+                        onAction="#datePickerAction"/>
+            <Button text="Получить график динамики" onAction="#getDynamicsGraph"/>
+        </HBox>
+
+        <!-- Таблица -->
+        <TableView fx:id="buildingSatesTableView" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="tableColumnRoom" text="Кабинет" prefWidth="120"/>
+                <TableColumn fx:id="tableColumnCO2" text="CO₂" prefWidth="150"/>
+                <TableColumn fx:id="tableColumnTemp" text="Температура" prefWidth="150"/>
+                <TableColumn fx:id="tableColumnHumidity" text="Влажность" prefWidth="150"/>
+                <TableColumn fx:id="tableColumnStatus" text="Статус" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?import java.lang.*?><?import java.util.*?><?import javafx.scene.*?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.geometry.Insets?>
+<GridPane fx:controller="com.example.monitoring_quality.controller.AlertsEditViewController"
+          xmlns:fx="http://javafx.com/fxml" prefHeight="400" prefWidth="400">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="30"/>
+        <ColumnConstraints percentWidth="70"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints percentHeight="10"/>
+    </rowConstraints>
+    <Label text="Комната" GridPane.halignment="RIGHT">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <ComboBox fx:id="idRooomCB" promptText="Выберите команту" GridPane.columnIndex="1" maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </ComboBox>
+
+    <Label text="Параметр" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <ComboBox fx:id="idParamCB" promptText="Выберите параметр" GridPane.columnIndex="1" GridPane.rowIndex="1"
+              maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </ComboBox>
+
+    <Label text="Значение" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="valueTF" promptText="Укажите значение" GridPane.columnIndex="1" GridPane.rowIndex="2"
+               maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </TextField>
+
+    <Label text="Дата и время" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="datetimeTF" promptText="Укажите значение" GridPane.columnIndex="1" GridPane.rowIndex="3"
+               maxWidth="250" text="1111-11-11T11:11:11">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </TextField>
+
+    <Label text="Решённый?" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <CheckBox fx:id="resolvedCB" GridPane.columnIndex="1" GridPane.rowIndex="4" maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </CheckBox>
+
+    <Label text="Кем решён" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="resolvedByTF" promptText="Укажите ФИО" GridPane.columnIndex="1" GridPane.rowIndex="5"
+               maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </TextField>
+
+    <Label text="Дата и время устранения" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="resolutionTimeTF" promptText="Укажите значение" GridPane.columnIndex="1" GridPane.rowIndex="6"
+               maxWidth="250" text="1111-11-11T11:11:11">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </TextField>
+
+    <HBox GridPane.rowIndex="8" alignment="BOTTOM_CENTER" GridPane.columnSpan="2">
+        <Button fx:id="saveBtn" text="Сохранить" onAction="#onSaveBtn">
+            <HBox.margin>
+                <Insets bottom="10" right="10"/>
+            </HBox.margin>
+        </Button>
+
+        <Button fx:id="cancelBtn" text="Отмена" onAction="#onCancelBtn">
+            <HBox.margin>
+                <Insets bottom="10" left="10"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</GridPane>

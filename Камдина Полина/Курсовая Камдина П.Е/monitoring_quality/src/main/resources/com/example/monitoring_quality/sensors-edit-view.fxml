@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><?import java.lang.*?><?import java.util.*?><?import javafx.scene.*?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.geometry.Insets?>
+<GridPane fx:controller="com.example.monitoring_quality.controller.SensorsEditViewController"
+          xmlns:fx="http://javafx.com/fxml" prefHeight="400" prefWidth="400">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="30"/>
+        <ColumnConstraints percentWidth="70"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints percentHeight="10"/>
+    </rowConstraints>
+    <Label text="Комната" GridPane.halignment="RIGHT">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <ComboBox fx:id="idRooomCB" promptText="Выберите комнату" GridPane.columnIndex="1" maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </ComboBox>
+
+    <Label text="Тип сенсора" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <ComboBox fx:id="typeSensorCB" promptText="Выберите тип сенсора" GridPane.columnIndex="1" GridPane.rowIndex="1"
+               maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </ComboBox>
+
+    <Label text="Расположение" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets right="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="locationNoteTF" promptText="Укажите расположение" GridPane.columnIndex="1" GridPane.rowIndex="2"
+               maxWidth="250">
+        <GridPane.margin>
+            <Insets left="5" top="10" bottom="10"/>
+        </GridPane.margin>
+    </TextField>
+
+    <HBox GridPane.rowIndex="4" alignment="BOTTOM_CENTER" GridPane.columnSpan="2">
+        <Button fx:id="saveBtn" text="Сохранить" onAction="#onSaveBtn">
+            <HBox.margin>
+                <Insets bottom="10" right="10"/>
+            </HBox.margin>
+        </Button>
+
+        <Button fx:id="cancelBtn" text="Отмена" onAction="#onCancelBtn">
+            <HBox.margin>
+                <Insets bottom="10" left="10"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</GridPane>

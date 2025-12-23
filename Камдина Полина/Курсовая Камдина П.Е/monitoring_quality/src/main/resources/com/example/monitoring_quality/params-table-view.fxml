@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.geometry.Insets?><?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.monitoring_quality.controller.ParamsTableViewController">
+    <MenuBar prefHeight="25" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets left="10" right="10"/>
+        </padding>
+        <menus>
+            <Menu mnemonicParsing="false" text="Навигация">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemBuildingsAction" text="Здания"/>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemRoomsAction" text="Комнаты"/>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemSensorsAction" text="Сенсоры"/>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemMeasurementsAction" text="Измерения"/>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemParamsAction" text="Значения"/>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemStandardsAction" text="Стандарты"/>
+                    <MenuItem mnemonicParsing="false" onAction="#MenuItemAlertsAction" text="События"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <HBox AnchorPane.topAnchor="35" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" prefHeight="25">
+        <Button fx:id="addBtn" text="Добавить" onAction="#onAddBtn">
+            <HBox.margin>
+                <Insets left="10"/>
+            </HBox.margin>
+        </Button>
+        <Button text="Изменить" onAction="#onUpdateBtn">
+            <HBox.margin>
+                <Insets left="10"/>
+            </HBox.margin>
+        </Button>
+        <Button text="Удалить" onAction="#onDeleteBtn">
+            <HBox.margin>
+                <Insets left="10"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <TableView fx:id="tableViewParams" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="70"
+               AnchorPane.bottomAnchor="10" fixedCellSize="50">
+        <columns>
+            <TableColumn fx:id="tableColumnIdParam" prefWidth="45" text="№"/>
+            <TableColumn fx:id="tableColumnParam" prefWidth="120" text="Название"/>
+        </columns>
+    </TableView>
+</AnchorPane>
